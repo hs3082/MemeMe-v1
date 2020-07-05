@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe_v1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MYU-BQ-WVf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-03-1o0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="l4y-Q1-nhU"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQR-yb-IcE">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Album" width="118" id="Btv-pJ-TKS">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="E68-rb-XnQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" style="plain" id="f3s-zr-Kuf">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hjo-DL-7ZN">
+                                            <rect key="frame" x="118" y="12" width="241" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Camera"/>
+                                            <connections>
+                                                <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Na-dJ-9ig"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MYU-BQ-WVf" firstAttribute="top" secondItem="Jcy-03-1o0" secondAttribute="bottom" id="4d0-NC-LWo"/>
+                            <constraint firstItem="mQR-yb-IcE" firstAttribute="top" secondItem="MYU-BQ-WVf" secondAttribute="bottom" id="8EZ-qv-KR5"/>
+                            <constraint firstItem="Jcy-03-1o0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYX-SQ-sZq"/>
+                            <constraint firstItem="Jcy-03-1o0" firstAttribute="leading" secondItem="MYU-BQ-WVf" secondAttribute="leading" id="DPT-fa-XdN"/>
+                            <constraint firstItem="MYU-BQ-WVf" firstAttribute="leading" secondItem="mQR-yb-IcE" secondAttribute="leading" id="P0P-WF-BG7"/>
+                            <constraint firstItem="Jcy-03-1o0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ti2-N5-2Tb"/>
+                            <constraint firstItem="MYU-BQ-WVf" firstAttribute="trailing" secondItem="mQR-yb-IcE" secondAttribute="trailing" id="lEd-ES-Mef"/>
+                            <constraint firstItem="mQR-yb-IcE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u07-gE-74s"/>
+                            <constraint firstItem="Jcy-03-1o0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vfO-gx-1Mt"/>
+                            <constraint firstItem="Jcy-03-1o0" firstAttribute="trailing" secondItem="MYU-BQ-WVf" secondAttribute="trailing" id="zn1-hl-m3Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImagePickerView" destination="MYU-BQ-WVf" id="Mh8-wj-Mx1"/>
+                        <outlet property="cameraButton" destination="f3s-zr-Kuf" id="uoz-rl-F18"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
